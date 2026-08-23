@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Cômodo Marfim - Galeria e Redes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            background-color: #000;
+        }
+
+        /* Fundo de show, com escurecido por cima para o texto ficar legível */
+        .fundo-show {
+            position: relative;
+            min-height: 100vh;
+            background-image:
+                linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+                url("show-fundo.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        p.subtitulo {
+            color: #ddd;
+            margin-top: 0;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* Galeria de fotos */
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 900px;
+            margin-bottom: 50px;
+        }
+
+        .galeria img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 2px solid white;
+            transition: transform 0.25s ease;
+            cursor: pointer;
+        }
+
+        .galeria img:hover,
+        .galeria img:active {
+            transform: scale(1.8);
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        /* Redes sociais */
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .redes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 400px;
+        }
+
+        .redes a {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 1.1em;
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        .redes a:hover {
+            background: white;
+            color: #111;
+        }
+
+        .voltar {
+            margin-top: 50px;
+        }
+
+        .voltar a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .voltar a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="fundo-show">
+        <h1>Cômodo Marfim</h1>
+        <p class="subtitulo">Nossos shows, nossos rostos, nossa música</p>
+
+        <div class="galeria">
+            <img src="502992501_3128122450668243_1611305166450961501_n.jpg" alt="Foto da banda 1">
+            <img src="foto-banda-2.jpg" alt="Foto da banda 2">
+            <img src="foto-banda-3.jpg" alt="Foto da banda 3">
+        </div>
+
+        <h2>Redes sociais</h2>
+        <div class="redes">
+            <a href="https://open.spotify.com/artist/46JJOBnZF8WUaJtW5aZmyX" target="_blank">🎵 Spotify</a>
+            <a href="https://www.youtube.com/c/comodomarfim" target="_blank">▶️ YouTube</a>
+            <a href="https://www.instagram.com/" target="_blank">📷 Instagram</a>
+            <a href="https://wa.me/5500000000000" target="_blank">📱 WhatsApp</a>
+        </div>
+
+        <div class="voltar">
+            <a href="index.html">&larr; Voltar para o início</a>
+        </div>
+    </div>
+</body>
+</html>
