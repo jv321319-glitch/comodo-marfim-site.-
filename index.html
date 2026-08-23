@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Banda Cômodo Marfim</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            min-height: 100vh;
+            background-image: url("502992501_3128122450668243_1611305166450961501_n.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .centro {
+            text-align: center;
+        }
+        .centro img {
+            width: 250px;
+            transition: transform 0.15s;
+        }
+        .centro img:hover {
+            transform: scale(1.05);
+        }
+        .centro img:active {
+            transform: scale(0.90);
+        }
+        #botaoMusica {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.75);
+            color: white;
+            border: 2px solid white;
+            border-radius: 30px;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        #botaoMusica:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        #botaoMusica:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div class="centro">
+        <h1>Conheça nossa banda</h1>
+        <a href="banda.html">
+            <img src="click-here-sem-fundo.png" alt="Clique aqui">
+        </a>
+        <br><br>
+        <button id="botaoMusica">▶ Tocar música</button>
+        <audio id="musica" loop>
+            <source src="audio-joao-vinicius.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <script>
+        const botao = document.getElementById("botaoMusica");
+        const musica = document.getElementById("musica");
+ // tenta tocar automaticamente ao entrar
+    window.addEventListener("load", function() {
+musica.play().then(() => {
+   botao.textContent = "Pausar música";
+}).catch(() => {
+     botao.textContent = "▶ Tocar música";
+});
+});
+        botao.addEventListener("click", function() {
+            if (musica.paused) {
+                musica.play();
+                botao.textContent = "⏸ Pausar música";
+            } else {
+                musica.pause();
+                botao.textContent = "▶ Tocar música";
+            }
+        });
+    </script>
+</body>
+</html>
